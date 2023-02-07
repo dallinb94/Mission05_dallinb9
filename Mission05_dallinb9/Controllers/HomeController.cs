@@ -18,12 +18,20 @@ namespace Mission05_dallinb9.Controllers
             _logger = logger;
         }
 
+        
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpGet]
+        public IActionResult GradeCalc()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult GradeCalc (GradeCalcModel model)
         {
             return View();
         }

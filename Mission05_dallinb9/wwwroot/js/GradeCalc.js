@@ -52,7 +52,6 @@
             letterGrade = "E";
         }
 
-        // this will allow the final grade as a letter and percentage be printed out in the index.html page
-        $("#finalGrade").html("Final Grade: " + letterGrade + " " + total.toFixed(2) + "%");
+        window.alert("Final Grade: " + letterGrade + " " + total.toFixed(2) + "%");
     });
 });

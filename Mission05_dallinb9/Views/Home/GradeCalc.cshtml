@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Grade Calculator";
+}
+
+@model GradeCalcModel
+
+<!-- This is where I start taking the client's input -->
+<form method="post">
+    <div class="post-preview">
+        <h2 class="post-title">Grade Calculator</h2>
+        <h6>Enter the percentage for each type of grade (which are weighted differently)</h6>
+
+        <label>Assignments (50%): </label>
+        <input id="assignment" type="number" step="0.01" asp-for="Assignments" />
+        <br />
+
+        <label>Group Projects (10%): </label>
+        <input id="groupProject" type="number" step="0.01" asp-for="Projects" />
+        <br />
+
+        <label>Quizzes (10%): </label>
+        <input id="quiz" type="number" step="0.01" asp-for="Quizzes" />
+        <br />
+
+        <label>Midterm Exam (10%): </label>
+        <input id="midtermExam" type="number" step="0.01" asp-for="Midterm" />
+        <br />
+
+        <label>Final Exam (10%): </label>
+        <input id="finalExam" type="number" step="0.01" asp-for="Final" />
+        <br />
+
+        <label>INTEX (10%): </label>
+        <input id="intex" type="number" step="0.01" asp-for="INTEX" />
+        <br />
+
+        <br />
+        <div style="text-align:center;">
+            <input id="calcButton" type="submit" value="Calculate Final Grade" />
+        </div>
+
+        <div asp-validation-summary="All"></div>
+    </div>
+</form>
